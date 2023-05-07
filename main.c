@@ -27,3 +27,15 @@ int main(void)
     datecmp();
     timecmp();
 }
+
+void filestat1()
+{
+    // stat1에 text1의 파일 정보를 저장
+    stat("text1", &stat1);
+}
+
+void filestat2()
+{
+    // stat2에 text2의 파일 정보를 저장
+    stat("text2", &stat2);
+}
