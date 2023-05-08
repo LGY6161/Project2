@@ -31,11 +31,25 @@ int main(void)
 void filestat1()
 {
     // stat1에 text1의 파일 정보를 저장
-    stat("text1", &stat1);
+    if(stat("text1", &stat1) == 0)
+    {
+        printf("text1의 파일정보를 가져옵니다. \n");
+    }
+    else
+    {
+        printf("text1의 파일정보를 가져오는데 실패합니다. \n");
+    }
 }
 
 void filestat2()
 {
     // stat2에 text2의 파일 정보를 저장
-    stat("text2", &stat2);
+    if(stat("text2", &stat2) == 0)
+    {
+        printf("text2의 파일정보를 가져옵니다. \n");
+    }
+    else
+    {
+        printf("text2의 파일정보를 가져오는데 실패합니다. \n");
+    }
 }
