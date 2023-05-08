@@ -53,5 +53,5 @@ void filetime2()
     file2_day = time2->tm_mday;
     file2_hour = time2->tm_hour;
     file2_min = time2->tm_min;
-    printf("text1 수정시간 : %d월 %d일 %d시 %d분 \n",file2_mon, file2_day, file2_hour, file2_min);
+    printf("text2 수정시간 : %d월 %d일 %d시 %d분 \n",file2_mon, file2_day, file2_hour, file2_min);
 }
