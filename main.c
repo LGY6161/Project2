@@ -55,3 +55,23 @@ void filetime2()
     file2_min = time2->tm_min;
     printf("text2 수정시간 : %d월 %d일 %d시 %d분 \n",file2_mon, file2_day, file2_hour, file2_min);
 }
+
+// 두 파일의 블록 사이즈를 비교하는 함수
+void blockcmp()
+{
+    int blk_size1 = (int)stat1.st_blocks; // stat1의 블록사이즈 저장
+    int blk_size2 = (int)stat2.st_blocks; // stat2의 블록사이즈 저장
+
+    if(blk_size1 > blk_size2) //text1의 block size가 큰 경우
+    {
+        prinf("text1 block size is bigger\n")
+    }
+    else if(blk_size1 < blk_size2) //text2의 block size가 큰 경우
+    {
+        prinf("text2 block size is bigger\n")
+    }
+    else //block size가 같은 경우
+    {
+        prinf("block size equal\n")
+    }
+}
