@@ -53,3 +53,21 @@ void filestat2()
         printf("text2의 파일정보를 가져오는데 실패합니다. \n");
     }
 }
+
+void sizecmp()
+{
+    int size1, size2;
+
+    // size값을 가져옴
+    size1 = stat1.st_size;
+    size2 = stat2.st_size;
+
+    printf("size compare\n");
+    // size 비교
+    if(size1 > size2)
+        printf("text1 is bigger\n");
+    else if(size1 < size2)
+        printf("text2 is bigger\n");
+    else
+        printf("sizes are equal\n"); 
+}
