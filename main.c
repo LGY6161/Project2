@@ -117,7 +117,7 @@ void datecmp() {
 		else if (file1_day < file2_day) { // 파일2의 일이 파일1의 일보다 큰 경우
 			printf("text1 is early, \n");
 		}
-		else { // 일도 같은 경우
+		else { //일도 같은 경우
 			printf("Same time\n");
 		}
 	}
