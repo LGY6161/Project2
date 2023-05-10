@@ -79,7 +79,7 @@ void blockcmp()
 
 void filestat1()
 {
-    // stat1에 text1의 파일 정보를 저장
+    //stat1에 text1의 파일 정보를 저장
     if(stat("text1", &stat1) == 0)
     {
         printf("text1의 파일정보를 가져옵니다. \n");
@@ -102,4 +102,44 @@ void filestat2()
         printf("text2의 파일정보를 가져오는데 실패합니다. \n");
     }
 }
+//두 개의 파일 수정 날짜를 비교하는 함수
+void datecmp() {
+	if (file1_mon > file2_mon) { // 파일1의 월이 파일2의 월보다 큰 경우
+		printf("text2 is early. \n");
+	}
+	else if (file1_mon < file2_mon) { // 파일2의 월이 파일1의 월보다 큰 경우
+		printf("text1 is early. \n");
+	}
+	else { // 월이 같은 경우
+		if (file1_day > file2_day) { // 파일1의 일이 파일2의 일보다 큰 경우
+			printf("text2 is early. \n");
+		}
+		else if (file1_day < file2_day) { // 파일2의 일이 파일1의 일보다 큰 경우
+			printf("text1 is early, \n");
+		}
+		else { // 일도 같은 경우
+			printf("Same time\n");
+		}
+	}
+}
 
+//두 개의 파일 수정 시간을 비교하는 함수
+void timecmp() {
+	if (file1_hour > file2_hour) { // 파일1의 시간이 파일2의 시간보다 큰 경우
+		printf("text2 is early.\n");
+	}
+	else if (file1_hour < file2_hour) { // 파일2의 시간이 파일1의 시간보다 큰 경우
+		printf("text1 is early. \n");
+	}
+	else { // 시간이 같은 경우
+		if (file1_min > file2_min) { // 파일1의 분이 파일2의 분보다 큰 경우
+			printf("text2 is early.n");
+		}
+		else if (file1_min < file2_min) { // 파일2의 분이 파일1의 분보다 큰 경우
+			printf("text1 is early.\n");
+		}
+		else { //분도 같은 경우
+			printf("Same time\n");
+		}
+	}
+}
