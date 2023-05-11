@@ -65,15 +65,15 @@ void blockcmp()
 
     if(blk_size1 > blk_size2) //text1의 block size가 큰 경우
     {
-        prinf("text1 block size is bigger\n")
+        printf("text1 block size is bigger\n")
     }
     else if(blk_size1 < blk_size2) //text2의 block size가 큰 경우
     {
-        prinf("text2 block size is bigger\n")
+        printf("text2 block size is bigger\n")
     }
     else //block size가 같은 경우
     {
-        prinf("block size equal\n")
+        printf("block size equal\n")
     }
 }
 
