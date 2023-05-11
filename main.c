@@ -5,6 +5,7 @@
 #include <time.h>
 
 struct stat stat1, stat2;
+struct tm *time1, time2;
 struct tm *time1, *time2;
 
 void filestat1(void);
@@ -18,7 +19,6 @@ void timecmp(void);
 
 int file1_mon, file1_day, file1_hour, file1_min;
 int file2_mon, file2_day, file2_hour, file2_min;
-
 int main(void)
 {
     filestat1();
@@ -65,15 +65,15 @@ void blockcmp()
 
     if(blk_size1 > blk_size2) //text1의 block size가 큰 경우
     {
-        prinf("text1 block size is bigger\n")
+        printf("text1 block size is bigger\n")
     }
     else if(blk_size1 < blk_size2) //text2의 block size가 큰 경우
     {
-        prinf("text2 block size is bigger\n")
+        printf("text2 block size is bigger\n")
     }
     else //block size가 같은 경우
     {
-        prinf("block size equal\n")
+        printf("block size equal\n")
     }
 }
 
@@ -142,4 +142,22 @@ void timecmp() {
 			printf("Same time\n");
 		}
 	}
+}
+
+void sizecmp()
+{
+    int size1, size2;
+
+    // size값을 가져옴
+    size1 = stat1.st_size;
+    size2 = stat2.st_size;
+
+    printf("size compare\n");
+    // size 비교
+    if(size1 > size2)
+        printf("text1 is bigger\n");
+    else if(size1 < size2)
+        printf("text2 is bigger\n");
+    else
+        printf("sizes are equal\n"); 
 }
